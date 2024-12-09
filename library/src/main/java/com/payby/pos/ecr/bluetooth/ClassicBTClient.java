@@ -1,3 +1,5 @@
+// ~ Author: AbdelRahman Odeh
+
 package com.payby.pos.ecr.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
@@ -79,8 +81,6 @@ public class ClassicBTClient implements Runnable {
         while (connecting) {
             try {
                 btSocket = bluetoothDevice.createRfcommSocketToServiceRecord(SPP_UUID);
-                // 当客户端调用此方法后，系统会执行 SDP 查找，以找到带有所匹配 UUID 的远程设备。如果查找成功并且远程设备接受连接，则其会共享 RFCOMM 通道以便在连接期间使用，并且 connect() 方法将会返回。
-                // 如果连接失败，或者 connect() 方法超时（约 12 秒后），则此方法将引发 IOException。
                 btSocket.connect();
             } catch (Exception e) {
                 e.printStackTrace();
