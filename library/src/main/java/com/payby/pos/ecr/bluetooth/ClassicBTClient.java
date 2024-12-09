@@ -1,5 +1,3 @@
-// ~ Author: AbdelRahman Odeh
-
 package com.payby.pos.ecr.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
